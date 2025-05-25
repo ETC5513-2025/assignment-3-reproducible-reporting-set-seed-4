@@ -19,6 +19,10 @@ addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
 
 ```{r}
+head(addiction,2)
+```
+
+```{r}
 missing_data <- data.frame(
   Missing_Count = colSums(is.na(addiction))
 )
