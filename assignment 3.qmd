@@ -46,3 +46,13 @@ ggplot(SSMA, aes(x = Academic_Level, y = Addicted_Score)) +
   theme(axis.text.x = element_text(angle = 30, hjust = 1))
 
 ```
+
+## 
+
+
+
+Methodology
+
+This project investigates the impact of social media addiction on students using a publicly available dataset. Key variables include daily usage hours, addiction scores, academic performance impact, mental health ratings, interpersonal conflicts, and most used platforms. Data cleaning involved checking for missing values.
+
+Descriptive and exploratory analyses were conducted to examine associations between addiction levels and outcomes. Boxplots, bar charts, and scatter plots were created to visualize variable relationships. A summary table was also generated to compare average usage hours and addiction scores by platform. 
