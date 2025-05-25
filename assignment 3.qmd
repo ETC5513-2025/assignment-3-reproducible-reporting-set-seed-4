@@ -4,6 +4,7 @@ format: html
 editor: visual
 ---
 
+<<<<<<< HEAD
 ```{r}
 library(tidyverse)
 ```
@@ -57,3 +58,57 @@ platform_summary <- addiction %>%
 platform_summary
 ```
 
+=======
+## 
+
+```{r}
+library(readr)
+library(ggplot2)
+```
+
+```{r}
+SSMA <- read_csv("data/Students Social Media Addiction.csv")
+```
+
+```{r}
+ggplot(SSMA, aes(x = Affects_Academic_Performance, fill = Academic_Level)) +
+  geom_bar(position = "dodge") +
+  labs(title = "Effect of Social Media on Academic Performance by Academic Level",
+       x = "Affects Academic Performance",
+       y = "Number of Students",
+       fill = "Academic Level") +
+  theme_minimal()
+
+
+```
+
+```{r}
+
+SSMA$Academic_Level <- factor(
+  SSMA$Academic_Level,
+  levels = c("High School", "Undergraduate", "Graduate"),
+  ordered = TRUE
+)
+
+ggplot(SSMA, aes(x = Academic_Level, y = Addicted_Score)) +
+  geom_boxplot(fill = "skyblue") +
+  labs(
+    title = "Addicted Score by Academic Level",
+    x = "Academic Level",
+    y = "Addicted Score"
+  ) +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 30, hjust = 1))
+
+```
+
+## 
+
+
+
+Methodology
+
+This project investigates the impact of social media addiction on students using a publicly available dataset. Key variables include daily usage hours, addiction scores, academic performance impact, mental health ratings, interpersonal conflicts, and most used platforms. Data cleaning involved checking for missing values.
+
+Descriptive and exploratory analyses were conducted to examine associations between addiction levels and outcomes. Boxplots, bar charts, and scatter plots were created to visualize variable relationships. A summary table was also generated to compare average usage hours and addiction scores by platform. 
+>>>>>>> Nana
