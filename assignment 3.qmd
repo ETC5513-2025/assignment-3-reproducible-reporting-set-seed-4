@@ -19,6 +19,13 @@ addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
 
 ```{r}
+missing_data <- data.frame(
+  Missing_Count = colSums(is.na(addiction))
+)
+missing_data
+```
+
+```{r}
 ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill = Affects_Academic_Performance)) +
   geom_boxplot() +
   facet_wrap(~ Academic_Level) +
