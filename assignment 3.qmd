@@ -27,6 +27,9 @@ The student social media addiction data has `r nrow(addiction)` observations and
 
 ```{r}
 library(tidyverse)
+library(dplyr)
+library(readr)
+
 ```
 
 ```{r}
@@ -48,6 +51,51 @@ missing_data
 ```
 
 @tbl-variabletable
+
+
+```{r}
+#| label: fig-barchart
+#| fig-cap: "Interpersonal Conflicts by Addiction Score"
+#| eval: true
+ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_Social_Media))) +
+  geom_bar(position = "fill") +
+  labs(title = "Interpersonal Conflicts by Addiction Score",
+       x = "Addicted Score", y = "Proportion",
+       fill = "Conflicts Occurred?") +
+  theme_minimal() +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+Interpersonal Conflicts@fig-barchart: The stacked bar chart demonstrates a strong positive correlation between addiction scores and interpersonal conflicts. Students with lower addiction scores (1-3) experience minimal conflicts, while those with higher scores (6-9) show dramatically increased conflict frequency, with some experiencing up to 5 conflicts. 
+
+
+```{r}
+#| label: fig-scatterplot
+#| fig-cap: "Interpersonal Conflicts by Addiction Score"
+#| eval: true
+ggplot(addiction, aes(x = Avg_Daily_Usage_Hours,
+               y = Mental_Health_Score)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_minimal()
+```
+Mental Health Correlation@fig-scatterplot: The scatter plot illustrates a negative relationship between daily usage hours and mental health scores. As average daily usage increases from 2 to 8 hours, mental health scores decline from approximately 8.5 to 3.5, indicating deteriorating psychological well-being. 
+
+```{r}
+#| label: tbl-table
+#| tbl-cap: Average Usage Hours and Addiction Score by Platform
+
+platform_summary <- addiction %>%
+  group_by(Most_Used_Platform) %>%
+  summarise(
+    Average_Usage_Hours    = mean(Avg_Daily_Usage_Hours, na.rm = TRUE),
+    Average_Addicted_Score = mean(Addicted_Score,        na.rm = TRUE)
+  ) %>%
+  arrange(desc(Average_Usage_Hours))
+platform_summary
+```
+
+Platform-Specific Patterns@tbl-table: WhatsApp users show both the highest average usage hours (6.48) and addiction scores (7.46), followed closely by TikTok users. Traditional platforms like Facebook and VKontakte demonstrate lower usage and addiction metrics. These findings support the research hypothesis that excessive social media engagement negatively impacts academic performance, interpersonal relationships, and mental health across student populations.
 
 ```{r}
 #| label: fig-Distribution
@@ -76,6 +124,7 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
        y = "Addicted Score") +
   theme_minimal()
 ```
+<<<<<<< HEAD
 
 
 ```{r}
@@ -113,6 +162,9 @@ platform_summary
 Analysis section:
 
 Based on the analysis of social media addiction's impact on students, several key findings emerge from the visualizations: Academic Performance Impact: The boxplot reveals a clear pattern where students reporting academic performance effects consistently show higher addiction scores (6-8 range) compared to those without reported effects (4-5 range). This relationship holds across all academic levels - graduate, high school, and undergraduate students. Interpersonal Conflicts: The stacked bar chart demonstrates a strong positive correlation between addiction scores and interpersonal conflicts. Students with lower addiction scores (1-3) experience minimal conflicts, while those with higher scores (6-9) show dramatically increased conflict frequency, with some experiencing up to 5 conflicts. Mental Health Correlation: The scatter plot illustrates a negative relationship between daily usage hours and mental health scores. As average daily usage increases from 2 to 8 hours, mental health scores decline from approximately 8.5 to 3.5, indicating deteriorating psychological well-being. Platform-Specific Patterns: WhatsApp users show both the highest average usage hours (6.48) and addiction scores (7.46), followed closely by TikTok users. Traditional platforms like Facebook and VKontakte demonstrate lower usage and addiction metrics. These findings support the research hypothesis that excessive social media engagement negatively impacts academic performance, interpersonal relationships, and mental health across student populations.
+=======
+Based on the analysis of social media addiction's impact on students, several key findings emerge from the visualizations: Academic Performance Impact@fig-variablechar: The boxplot reveals a clear pattern where students reporting academic performance effects consistently show higher addiction scores (6-8 range) compared to those without reported effects (4-5 range). This relationship holds across all academic levels - graduate, high school, and undergraduate students.
+>>>>>>> 202af24 (yani)
 
 ## Conclusion & Recommendations
 
