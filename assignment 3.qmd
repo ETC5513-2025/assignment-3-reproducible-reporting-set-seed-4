@@ -2,15 +2,16 @@
 title: "assignment 3"
 format: html
 editor: visual
+bibliography: references.bib
 ---
 
 ## Introduction
 
 Social media platforms—such as Instagram, TikTok, and YouTube—have become an integral part of students' lives, shaping their routines, relationships and self-perception.
 
-The use of social media, whether through direct communication or sharing and interacting with content, plays an inherently social role in students' lives. As such, social media usage may have important implications for increasing connection with individuals and groups, offering young people a forum to find community and express themselves.
+The use of social media, whether through direct communication or sharing and interacting with content, plays an inherently social role in students' lives. As such, social media usage may have important implications for increasing connection with individuals and groups, offering young people a forum to find community and express themselves [@winstone2021social].
 
-However, rising concerns from the U.S. Surgeon General and multiple research studies have drawn attention to the negative impact of social media on the well-being of young people, and that excessive use of social media—often measured by screen time—seems to displace essential activities such as sleep and exercise. The attorneys general of dozens of US states sued Instagram and its parent company Meta over their impact on young users, accusing them of contributing to a youth mental health crisis through the addictive nature of their social media platforms. These discussions reveal the dual-edged role of social media–it can foster connection, yet also introduce risks that may affect students’ health, behavior, and academic life.
+However, rising concerns from the U.S. Surgeon General and multiple research studies have drawn attention to the negative impact of social media on the well-being of young people, and that excessive use of social media—often measured by screen time—seems to displace essential activities such as sleep and exercise [@nyt2023surgeon]. The attorneys general of dozens of US states sued Instagram and its parent company Meta over their impact on young users, accusing them of contributing to a youth mental health crisis through the addictive nature of their social media platforms [@guardian2023meta]. These discussions reveal the dual-edged role of social media–it can foster connection, yet also introduce risks that may affect students’ health, behavior, and academic life.
 
 This study focuses on students–mostly undergraduates and graduates–to explore the impact of social media addiction on academic performance and interpersonal relationships, as well as how time spent on social media relates to mental health. Our findings could not only inform further research into how these addiction-driven trends are interconnected, but also potentially support governments and educators in developing strategies to promote student well-being.
 
