@@ -39,15 +39,15 @@ missing_data
 @tbl-variabletable
 
 ```{r}
-#| label: fig-variablechar
-#| fig-cap: "Addicted Score vs Academic Impact (by Academic Level)"
+#| label: fig-Distribution
+#| fig-cap: "Distribution of Addicted Scores"
 #| eval: true
 
-ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill = Affects_Academic_Performance)) +
-  geom_boxplot() +
-  facet_wrap(~ Academic_Level) +
-  labs(title = "Addicted Score vs Academic Impact (by Academic Level)",
-       x = "Does Social Media Affect Academic Performance?",
-       y = "Addicted Score") +
-  theme_minimal()
+hist(addiction$Addicted_Score,
+     breaks = 6,
+     col = "skyblue",
+     border = "black",
+     main = "Distribution of Addicted Scores",
+     xlab = "Addicted Score",
+     ylab = "Frequency")
 ```
