@@ -3,6 +3,7 @@ title: "assignment 3"
 format: html
 editor: visual
 ---
+
 ## Introduction
 
 Social media platforms—such as Instagram, TikTok, and YouTube—have become an integral part of students' lives, shaping their routines, relationships and self-perception.
