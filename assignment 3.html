@@ -194,7 +194,7 @@ Addicted_Score                           0</code></pre>
 </div>
 </figure>
 </div>
-<p><a href="#tbl-variabletable" class="quarto-xref">Table&nbsp;1</a> shows the missing values across all variables. A summary table was generated to count missing entries per column. As shown in Table X, all key variables such as addiction score, academic performance impact, sleep hours, and mental health score had no missing values, indicating a complete dataset suitable for analysis without imputation.</p>
+<p>As shown in <a href="#tbl-variabletable" class="quarto-xref">Table&nbsp;1</a> , all key variables such as addiction score, academic performance impact, sleep hours, and mental health score had no missing values, indicating a complete dataset suitable for analysis without imputation.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(addiction<span class="sc">$</span>Addicted_Score,</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks =</span> <span class="dv">6</span>,</span>
@@ -216,7 +216,17 @@ Figure&nbsp;1: Distribution of Addicted Scores
 </div>
 </div>
 </div>
-<p><a href="#fig-Distribution" class="quarto-xref">Figure&nbsp;1</a> illustrates the distribution of self-reported addiction scores (1–10) among all participants. The majority of students fall in the 6–8 range, with the highest bar at 6–7, indicating a sample skewed toward moderate-to-high addiction levels. Scores below 4 are comparatively rare. This left-skewed distribution confirms that Addicted_Score is a meaningful and varied independent variable for our subsequent descriptive analyses.</p>
+<p><a href="#fig-Distribution" class="quarto-xref">Figure&nbsp;1</a> illustrates the distribution of addiction scores among students. The majority of students report scores between 6 and 8, with relatively few responses below 4. This left-skewed distribution indicates a moderate to high prevalence of self-perceived social media addiction. The distribution also demonstrates sufficient variability across the sample, supporting the use of Addicted_Score as a key independent variable in the subsequent analysis.</p>
+</section>
+<section id="method" class="level3">
+<h3 class="anchored" data-anchor-id="method">Method</h3>
+<p>Visual analyses were used to explore associations between social media addiction and student outcomes. These included:</p>
+<ul>
+<li><p>A stacked bar chart showing the proportion of interpersonal conflicts by addiction score level.</p></li>
+<li><p>A scatter plot with linear regression line to assess the relationship between daily usage hours and mental health scores.</p></li>
+<li><p>A boxplot comparing addiction scores among students who reported academic impacts versus those who did not, stratified by academic level.</p></li>
+<li><p>A summary table aggregating average usage hours and addiction scores by most used platform.</p></li>
+</ul>
 </section>
 </section>
 <section id="result" class="level2">

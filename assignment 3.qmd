@@ -46,7 +46,7 @@ missing_data <- data.frame(
 missing_data
 ```
 
-@tbl-variabletable shows the missing values across all variables. A summary table was generated to count missing entries per column. As shown in Table X, all key variables such as addiction score, academic performance impact, sleep hours, and mental health score had no missing values, indicating a complete dataset suitable for analysis without imputation.
+As shown in @tbl-variabletable , all key variables such as addiction score, academic performance impact, sleep hours, and mental health score had no missing values, indicating a complete dataset suitable for analysis without imputation.
 
 ```{r}
 #| label: fig-Distribution
@@ -62,7 +62,7 @@ hist(addiction$Addicted_Score,
      ylab = "Frequency")
 ```
 
-@fig-Distribution llustrates the distribution of addiction scores among students. The majority of students report scores between 6 and 8, with relatively few responses below 4. This left-skewed distribution indicates a moderate to high prevalence of self-perceived social media addiction. The distribution also demonstrates sufficient variability across the sample, supporting the use of Addicted_Score as a key independent variable in the subsequent analysis.
+@fig-Distribution illustrates the distribution of addiction scores among students. The majority of students report scores between 6 and 8, with relatively few responses below 4. This left-skewed distribution indicates a moderate to high prevalence of self-perceived social media addiction. The distribution also demonstrates sufficient variability across the sample, supporting the use of Addicted_Score as a key independent variable in the subsequent analysis.
 
 ### Method
 
