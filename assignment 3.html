@@ -125,8 +125,6 @@ div.csl-indent {
 </section>
 <section id="methodology" class="level2">
 <h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
-<p>This project investigates the impact of social media addiction on students using a publicly available dataset. Key variables include daily usage hours, addiction scores, academic performance impact, mental health ratings, interpersonal conflicts, and most used platforms. Data cleaning involved checking for missing values.</p>
-<p>Descriptive and exploratory analyses were conducted to examine associations between addiction levels and outcomes. Boxplots, bar charts, and scatter plots were created to visualize variable relationships. A summary table was also generated to compare average usage hours and addiction scores by platform.</p>
 <section id="dataset-description" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-description">Dataset Description</h3>
 <div class="cell">
@@ -149,6 +147,7 @@ div.csl-indent {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>addiction <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/Students Social Media Addiction.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<p>The dataset was obtained from Kaggle <span class="citation" data-cites="shamim2023social">(<a href="#ref-shamim2023social" role="doc-biblioref">Shamim 2023</a>)</span> and contains 705 observations of student self-reports on social media usage and its effects. Each row represents a unique student, and the dataset includes 13 variables such as average daily usage hours, addiction score (1–10), academic performance impact, sleep hours, mental health score, and most used social media platform.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(addiction,<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -347,6 +346,9 @@ Figure&nbsp;4: Addicted Score vs Academic Impact (by Academic Level)
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-guardian2023meta" class="csl-entry" role="listitem">
 Guardian, The. 2023. <span>“Instagram Lawsuit: Meta Sued by Dozens of US States over Impact on Youth Mental Health.”</span> <em>The Guardian</em>. <a href="https://www.theguardian.com/technology/2023/oct/24/instagram-lawsuit-meta-sued-teen-mental-health-us">https://www.theguardian.com/technology/2023/oct/24/instagram-lawsuit-meta-sued-teen-mental-health-us</a>.
+</div>
+<div id="ref-shamim2023social" class="csl-entry" role="listitem">
+Shamim, Adil. 2023. <span>“Social Media Addiction Vs Relationships.”</span> <a href="https://www.kaggle.com/datasets/adilshamim8/social-media-addiction-vs-relationships" class="uri">https://www.kaggle.com/datasets/adilshamim8/social-media-addiction-vs-relationships</a>.
 </div>
 <div id="ref-nyt2023surgeon" class="csl-entry" role="listitem">
 Times, The New York. 2023. <span>“Surgeon General Warns Social Media Poses <span>‘Profound Risk’</span> to Youth Mental Health.”</span> <em>The New York Times</em>, May. <a href="https://www.nytimes.com/2023/05/23/health/surgeon-general-social-media-mental-health.html">https://www.nytimes.com/2023/05/23/health/surgeon-general-social-media-mental-health.html</a>.

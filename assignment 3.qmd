@@ -17,9 +17,6 @@ This study focuses mainly on "How social media addiction affects students in var
 
 ## Methodology
 
-This project investigates the impact of social media addiction on students using a publicly available dataset. Key variables include daily usage hours, addiction scores, academic performance impact, mental health ratings, interpersonal conflicts, and most used platforms. Data cleaning involved checking for missing values.
-
-Descriptive and exploratory analyses were conducted to examine associations between addiction levels and outcomes. Boxplots, bar charts, and scatter plots were created to visualize variable relationships. A summary table was also generated to compare average usage hours and addiction scores by platform.
 
 ### Dataset Description
 
@@ -34,6 +31,8 @@ library(readr)
 ```{r}
 addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
+
+The dataset was obtained from Kaggle [@shamim2023social] and contains `r nrow(addiction)` observations of student self-reports on social media usage and its effects. Each row represents a unique student, and the dataset includes `r ncol(addiction)` variables such as average daily usage hours, addiction score (1–10), academic performance impact, sleep hours, mental health score, and most used social media platform.
 
 ```{r}
 head(addiction,2)
