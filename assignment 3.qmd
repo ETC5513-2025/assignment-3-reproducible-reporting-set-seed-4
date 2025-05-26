@@ -36,7 +36,7 @@ missing_data <- data.frame(
 missing_data
 ```
 
-@tbl-variabletable
+@tbl-variabletable shows the missing values across all variables. A summary table was generated to count missing entries per column. As shown in Table X, all key variables such as addiction score, academic performance impact, sleep hours, and mental health score had no missing values, indicating a complete dataset suitable for analysis without imputation.
 
 ```{r}
 #| label: fig-Distribution
@@ -51,3 +51,5 @@ hist(addiction$Addicted_Score,
      xlab = "Addicted Score",
      ylab = "Frequency")
 ```
+
+@fig-Distribution illustrates the distribution of self-reported addiction scores (1–10) among all participants. The majority of students fall in the 6–8 range, with the highest bar at 6–7, indicating a sample skewed toward moderate-to-high addiction levels. Scores below 4 are comparatively rare. This left-skewed distribution confirms that Addicted_Score is a meaningful and varied independent variable for our subsequent descriptive analyses.
