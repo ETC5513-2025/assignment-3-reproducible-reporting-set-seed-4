@@ -1,5 +1,5 @@
 ---
-title: "assignment 3-presentation"
+title: "The Impact of Social Media Addiction on Students"
 format: revealjs
 editor: visual
 ---
@@ -18,8 +18,7 @@ library(readr)
 addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
 
-
-::: columns
+::::: columns
 ::: {.column width="45%"}
 The dataset from Kaggle includes `r nrow(addiction)` student records and `r ncol(addiction)` variables on social media usage and its effects. Each row represents a student and covers variables like usage hours, addiction score, academic impact, sleep, and mental health.
 :::
@@ -34,14 +33,12 @@ missing_data <- data.frame(
 )
 missing_data
 ```
-
 :::
-:::
+:::::
 
----
+------------------------------------------------------------------------
 
 ### Dataset description
-
 
 ```{r}
 #| label: fig-Distribution
@@ -57,16 +54,16 @@ hist(addiction$Addicted_Score,
      ylab = "Frequency")
 ```
 
----
+------------------------------------------------------------------------
+
 ## Method
 
 Visual analyses were used to explore associations between social media addiction and student outcomes. These included:
 
-- A stacked bar chart showing the proportion of interpersonal conflicts by addiction score level.
+-   A stacked bar chart showing the proportion of interpersonal conflicts by addiction score level.
 
-- A scatter plot with linear regression line to assess the relationship between daily usage hours and mental health scores.
+-   A scatter plot with linear regression line to assess the relationship between daily usage hours and mental health scores.
 
-- A boxplot comparing addiction scores among students who reported academic impacts versus those who did not, stratified by academic level.
+-   A boxplot comparing addiction scores among students who reported academic impacts versus those who did not, stratified by academic level.
 
-- A summary table aggregating average usage hours and addiction scores by most used platform.
-
+-   A summary table aggregating average usage hours and addiction scores by most used platform.
