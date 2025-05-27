@@ -34,13 +34,13 @@ format:
 
 -   Double-edged role:
 
-    -   Support connection and self-expression
-    -   Excessive use may displace essential habits like sleep and study
+    - <span style="font-size: 0.9em;">Support connection and self-expression</span> 
+    - <span style="font-size: 0.9em;">Displace essential habits like sleep and study</span>
 
 -   Authorities and researchers have raised concerns about social media in mental health issues
 
 ::: fragment
--   This study asks: **How does social media addiction affect students’ academic performance, mental health, and relationships?**
+*How does social media addiction affect students’ academic performance, mental health, and relationships?*
 :::
 
 ------------------------------------------------------------------------
