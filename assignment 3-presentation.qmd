@@ -93,3 +93,184 @@ Visual analyses were used to explore associations between social media addiction
 -   A boxplot comparing addiction scores among students who reported academic impacts versus those who did not, stratified by academic level.
 
 -   A summary table aggregating average usage hours and addiction scores by most used platform. ::::::
+
+---
+
+## Analysis Part
+### How does social media affect student
+```{r}
+library(ggplot2)
+library(tidyverse)
+library(kableExtra)
+library(dplyr)
+library(formattable)
+
+
+```
+
+:::::::: columns
+
+:::: {.column width="33%"}
+```{r}
+
+#| echo: false
+#| fig-width: 4
+#| fig-height: 4
+ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_Social_Media))) +
+  geom_bar(position = "fill") +
+  labs(
+    title = "Conflicts vs Addiction",
+    x = "Addiction Score",
+    y = "Proportion",
+    fill = "Conflicts Over Social Media"
+  ) +
+  theme_minimal() +
+  theme(
+    axis.text.x = element_text(angle = 45, hjust = 1),
+    legend.position = "bottom",              
+    legend.title = element_text(hjust = 0.5) 
+  ) +
+  guides(
+    fill = guide_legend(title.position = "top", title.hjust = 0.5)  
+  )
+
+```
+
+::: fragment
+
+🧱 More addiction = more conflict High addiction scores strongly associate with interpersonal conflicts.
+
+:::
+
+::::
+
+:::: {.column width="33%"}
+
+```{r}
+
+#| echo: false
+#| fig-width: 4
+#| fig-height: 4
+ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
+  geom_point(alpha = 0.6) +
+  geom_smooth(method = "lm", se = FALSE) +
+  theme_minimal()
+```
+
+::: fragment
+
+📉 More screen time, worse mental health Daily use over 6 hours relates to low mental well-being.
+
+:::
+
+::::
+
+::: {.column .fragment width="33%"}
+
+💡 Conclusion Social media overuse impacts emotional stability and personal relationships.
+
+:::
+
+::::::::
+
+------------------------------------------------------------------------
+
+## Platform Patterns & Academic Effects
+
+:::::::: columns
+
+:::: {.column width="40%"}
+
+```{r}
+platform_summary <- addiction %>%
+  group_by(Most_Used_Platform) %>%
+  summarise(
+    Users = n(),
+    Avg_Hours = round(mean(Avg_Daily_Usage_Hours, na.rm = TRUE), 1),
+    Addiction_Score = round(mean(Addicted_Score, na.rm = TRUE), 1),
+    .groups = 'drop'
+  ) %>%
+  arrange(desc(Avg_Hours)) %>%
+  mutate(
+    Rank = row_number(),
+    Risk_Level = case_when(
+      Avg_Hours >= 6 ~ "🔴 High",
+      Avg_Hours >= 4 ~ "🟡 Medium", 
+      TRUE ~ "🟢 Low"
+    )
+  ) %>%
+  select(Rank, Most_Used_Platform, Users, Avg_Hours, Addiction_Score, Risk_Level) %>%
+  slice_head(n = 5)
+# Create improved table
+platform_summary %>%
+  kable(
+    col.names = c("Rank", "Platform", "Users", "Daily Hours", "Addiction Score", "Risk Level"),
+    align = c("c", "l", "c", "c", "c", "c"),
+    caption = "📱 Top 5 Social Media Platforms by Daily Usage"
+  ) %>%
+  kable_styling(
+    bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+    full_width = FALSE,
+    font_size = 14,
+    position = "center"
+  ) %>%
+  # Highlight top 3 platforms
+  row_spec(1, bold = TRUE, color = "white", background = "#e74c3c") %>%
+  row_spec(2, bold = TRUE, color = "white", background = "#f39c12") %>%
+  row_spec(3, bold = TRUE, color = "white", background = "#f1c40f") %>%
+  # Style header
+  row_spec(0, bold = TRUE, color = "white", background = "#34495e", font_size = 16) %>%
+  # Adjust column widths
+  column_spec(1, bold = TRUE, width = "1.5cm") %>%
+  column_spec(2, bold = TRUE, width = "4.5cm") %>%
+  column_spec(3, width = "2.5cm") %>%
+  column_spec(4, width = "2.5cm") %>%
+  column_spec(5, width = "3cm") %>%
+  column_spec(6, width = "3.5cm") %>% 
+  scroll_box(width = "100%")
+
+
+```
+
+::: fragment
+
+📱 WhatsApp & TikTok = high risk Top platforms show highest usage & addiction.
+
+:::
+
+::::
+
+:::: {.column width="35%"}
+
+```{r}
+#| echo: false
+#| fig-width: 4
+#| fig-height: 4
+ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill = Affects_Academic_Performance)) +
+  geom_boxplot() +
+  facet_wrap(~ Academic_Level) +
+  theme_minimal() +
+  theme(
+    legend.position = "bottom",        
+    legend.direction = "horizontal",  
+    legend.title = element_blank()    
+  )
+
+```
+
+::: fragment
+
+🎓 Addiction affects grades Across all academic levels, students reporting academic impact have higher addiction.
+
+:::
+
+::::
+
+::: {.column .fragment width="20%"}
+
+📚 Conclusion Usage patterns vary by platform, but academic impact is widespread.
+
+:::
+
+::::::::
+
