@@ -9,9 +9,20 @@ format:
 
 # The Impact of Social Media Addiction on Students
 
-*Kaiyi Ye* *Nana Cheng*
-
-*Yi Yang* *Richa Anghan*
+:::{.columns}
+::: {.column width="25%"}
+*Nana Cheng*  
+:::
+::: {.column width="25%"}
+*Kaiyi Ye*
+:::
+::: {.column width="25%"}
+*Richa Anghan*
+:::
+::: {.column width="25%"}
+*Yi Yang*
+:::
+::: 
 
 2025-05-29
 
