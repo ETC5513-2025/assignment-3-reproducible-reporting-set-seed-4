@@ -1,14 +1,17 @@
 ---
 title: "The Impact of Social Media Addiction on Students"
-format: revealjs
-editor: visual
+format:
+  revealjs:
+    title-slide: false
+    theme: simple
+    transition: fade
 ---
 
 # The Impact of Social Media Addiction on Students
 
-*Kaiyi Ye*     *Nana Cheng*
+*Kaiyi Ye* *Nana Cheng*
 
-*Yi Yang*     *Richa Anghan*
+*Yi Yang* *Richa Anghan*
 
 2025-05-29
 
