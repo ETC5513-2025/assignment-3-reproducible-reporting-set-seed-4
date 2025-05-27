@@ -1,32 +1,17 @@
 ---
 title: "The Impact of Social Media Addiction on Students"
+author:
+  - Nana Cheng
+  - Kaiyi Ye
+  - Richa Anghan
+  - Yi yang
+date: 2025-05-29
 format:
   revealjs:
     title-slide: false
     theme: simple
     transition: fade
 ---
-
-# The Impact of Social Media Addiction on Students
-
-:::{.columns}
-::: {.column width="25%"}
-*Nana Cheng*  
-:::
-::: {.column width="25%"}
-*Kaiyi Ye*
-:::
-::: {.column width="25%"}
-*Richa Anghan*
-:::
-::: {.column width="25%"}
-*Yi Yang*
-:::
-::: 
-
-2025-05-29
-
-------------------------------------------------------------------------
 
 ## Introduction
 
