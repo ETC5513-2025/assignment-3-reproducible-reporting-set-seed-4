@@ -4,6 +4,16 @@ format: revealjs
 editor: visual
 ---
 
+# The Impact of Social Media Addiction on Students
+
+*Kaiyi Ye*     *Nana Cheng*
+
+*Yi Yang*     *Richa Anghan*
+
+2025-05-29
+
+---
+
 ## Dataset description
 
 ```{r}
