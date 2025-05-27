@@ -12,7 +12,24 @@ editor: visual
 
 2025-05-29
 
----
+------------------------------------------------------------------------
+
+## Introduction
+
+-   Social media platforms are deeply embedded in students’ daily routines
+
+-   Double-edged role:
+
+    -   Support connection and self-expression
+    -   Excessive use may displace essential habits like sleep and study
+
+-   Authorities and researchers have raised concerns about social media in mental health issues
+
+::: fragment
+-   This study asks: **How does social media addiction affect students’ academic performance, mental health, and relationships?**
+:::
+
+------------------------------------------------------------------------
 
 ## Dataset description
 
@@ -76,4 +93,4 @@ Visual analyses were used to explore associations between social media addiction
 
 -   A boxplot comparing addiction scores among students who reported academic impacts versus those who did not, stratified by academic level.
 
--   A summary table aggregating average usage hours and addiction scores by most used platform.
+-   A summary table aggregating average usage hours and addiction scores by most used platform. ::::::
