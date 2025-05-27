@@ -108,17 +108,10 @@ library(formattable)
 
 ```
 
-<<<<<<< HEAD
-=======
+
 ```{r}
 addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
-
-## Analysis Part(just for discuss,not for the final version)
-
-## How does social media affect students?
-
->>>>>>> d03c41a (yani)
 :::::::: columns
 
 :::: {.column width="33%"}
