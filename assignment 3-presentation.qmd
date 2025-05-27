@@ -44,12 +44,9 @@ library(readr)
 addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
 
-::::: columns
-::: {.column width="45%"}
-The dataset from Kaggle includes `r nrow(addiction)` student records and `r ncol(addiction)` variables on social media usage and its effects. Each row represents a student and covers variables like usage hours, addiction score, academic impact, sleep, and mental health.
-:::
 
-::: {.column width="55%"}
+The dataset from Kaggle includes `r nrow(addiction)` student records and `r ncol(addiction)` variables on social media usage and its effects.  Each row represents a student and includes variables like:  
+
 ```{r}
 #| label: tbl-variabletable
 #| tbl-cap: Variable Names of the addiction Data
@@ -59,12 +56,12 @@ missing_data <- data.frame(
 )
 missing_data
 ```
-:::
-:::::
+
 
 ------------------------------------------------------------------------
 
 ### Dataset description
+
 
 ```{r}
 #| label: fig-Distribution
@@ -79,12 +76,14 @@ hist(addiction$Addicted_Score,
      xlab = "Addicted Score",
      ylab = "Frequency")
 ```
+::: {.fragment}
+
+@fig-Distribution shows that most students report addiction scores between 6 and 8, with few below 4. This suggests a moderate to high level of perceived addiction and sufficient variation for further analysis.
+:::
 
 ------------------------------------------------------------------------
 
 ## Method
-
-Visual analyses were used to explore associations between social media addiction and student outcomes. These included:
 
 -   A stacked bar chart showing the proportion of interpersonal conflicts by addiction score level.
 
@@ -92,7 +91,7 @@ Visual analyses were used to explore associations between social media addiction
 
 -   A boxplot comparing addiction scores among students who reported academic impacts versus those who did not, stratified by academic level.
 
--   A summary table aggregating average usage hours and addiction scores by most used platform. ::::::
+-   A summary table aggregating average usage hours and addiction scores by most used platform. 
 
 ---
 
