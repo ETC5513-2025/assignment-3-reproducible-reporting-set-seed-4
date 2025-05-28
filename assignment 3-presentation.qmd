@@ -19,8 +19,8 @@ format:
 
 -   Double-edged role:
 
-    - <span style="font-size: 0.9em;">Support connection and self-expression</span> 
-    - <span style="font-size: 0.9em;">Displace essential habits like sleep and study</span>
+    -   [Support connection and self-expression]{style="font-size: 0.9em;"}
+    -   [Displace essential habits like sleep and study]{style="font-size: 0.9em;"}
 
 -   Authorities and researchers have raised concerns about social media in mental health issues
 
@@ -93,10 +93,12 @@ hist(addiction$Addicted_Score,
 
 -   A summary table aggregating average usage hours and addiction scores by most used platform. 
 
----
+------------------------------------------------------------------------
 
 ## Analysis Part
+
 ### How does social media affect student
+
 ```{r}
 library(ggplot2)
 library(tidyverse)
@@ -107,18 +109,16 @@ library(formattable)
 
 ```
 
-
 ```{r}
 addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
-:::::::: columns
 
+:::::::: columns
 :::: {.column width="33%"}
 ```{r}
-
 #| echo: false
-#| fig-width: 4
-#| fig-height: 4
+#| fig-width: 10
+#| fig-height: 10
 ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_Social_Media))) +
   geom_bar(position = "fill") +
   labs(
@@ -140,20 +140,16 @@ ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_S
 ```
 
 ::: fragment
-
 🧱 More addiction = more conflict High addiction scores strongly associate with interpersonal conflicts.
-
 :::
-
 ::::
 
 :::: {.column width="33%"}
-
 ```{r}
 
 #| echo: false
-#| fig-width: 4
-#| fig-height: 4
+#| fig-width: 10
+#| fig-height: 10
 ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
   geom_point(alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
@@ -161,29 +157,20 @@ ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
 ```
 
 ::: fragment
-
 📉 More screen time, worse mental health Daily use over 6 hours relates to low mental well-being.
-
 :::
-
 ::::
 
-::: {.column .fragment width="33%"}
-
-💡 Conclusion Social media overuse impacts emotional stability and personal relationships.
 
 :::
 
-::::::::
 
 ------------------------------------------------------------------------
 
 ## Platform Patterns & Academic Effects
 
 :::::::: columns
-
 :::: {.column width="40%"}
-
 ```{r}
 platform_summary <- addiction %>%
   group_by(Most_Used_Platform) %>%
@@ -236,15 +223,11 @@ platform_summary %>%
 ```
 
 ::: fragment
-
 📱 WhatsApp & TikTok = high risk Top platforms show highest usage & addiction.
-
 :::
-
 ::::
 
 :::: {.column width="35%"}
-
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -262,18 +245,10 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
 ```
 
 ::: fragment
-
 🎓 Addiction affects grades Across all academic levels, students reporting academic impact have higher addiction.
-
 :::
-
 ::::
 
-::: {.column .fragment width="20%"}
-
-📚 Conclusion Usage patterns vary by platform, but academic impact is widespread.
 
 :::
-
-::::::::
 
