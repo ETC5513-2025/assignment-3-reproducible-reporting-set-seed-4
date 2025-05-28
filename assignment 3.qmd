@@ -136,6 +136,10 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
        y = "Addicted Score") +
   theme_minimal()
 ```
+<<<<<<< HEAD
+=======
+
+>>>>>>> dcdc9dc (yani)
 
 Based on the analysis of social media addiction's impact on students, several key findings emerge from the visualizations: Academic Performance Impact @fig-variablechar: The boxplot reveals a clear pattern where students reporting academic performance effects consistently show higher addiction scores (6-8 range) compared to those without reported effects (4-5 range). This relationship holds across all academic levels - graduate, high school, and undergraduate students.
 
@@ -148,6 +152,17 @@ A strong negative correlation was observed between daily usage hours and mental 
 These findings confirm that heavy social media engagement can interfere with students’ focus, emotional balance, and relationships, making it a key factor in their overall daily life experience.
 
 Here are some recommendations:
+<<<<<<< HEAD
+=======
+
+
+## Conclusion 
+
+Social media has become an integral part of student life, shaping daily routines, communication, and even academic success. While it offers a gateway to global connections and endless information, its overuse carries significant consequences. This study paints a clear picture: students who spend excessive hours on social platforms tend to experience academic struggles, interpersonal conflicts, and declining mental health. The findings aren’t just abstract statistics; they mirror the reality many students face—the temptation of late-night scrolling, the frustration of online arguments, and the mental exhaustion that builds over time.
+Platforms like WhatsApp and TikTok, while immensely popular, show the highest levels of addiction, reinforcing the idea that social media can easily transition from a tool to a dependency. Students with higher addiction scores report a noticeable dip in academic performance and an increase in conflicts with friends and family. Moreover, as daily screen time rises, mental health scores fall, suggesting that excessive usage may erode emotional resilience.
+This study doesn’t advocate abandoning social media but rather calls for mindful engagement. Recognizing its impact allows students to make informed choices—perhaps setting limits on usage, prioritizing real-world interactions, and fostering a healthier balance between digital and offline life. Social media isn’t inherently harmful, but managing its influence is crucial to ensuring that it enhances rather than diminishes student well-being.
+>>>>>>> 202af24 (yani)
+>>>>>>> dcdc9dc (yani)
 
 -   Establish time limits for social media engagement can help prevent excessive scrolling, particularly during study sessions and before sleep. Apps with built-in timers or digital well-being features can be useful for this.
 -   Schedule study sessions and coursework ahead of social media browsing ensures that academic performance isn’t compromised due to distraction.
