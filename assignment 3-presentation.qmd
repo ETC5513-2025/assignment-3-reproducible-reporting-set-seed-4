@@ -113,10 +113,9 @@ addiction <- read.csv("data/Students Social Media Addiction.csv")
 :::::::: columns
 :::: {.column width="33%"}
 ```{r}
-
 #| echo: false
-#| fig-width: 4
-#| fig-height: 4
+#| fig-width: 10
+#| fig-height: 10
 ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_Social_Media))) +
   geom_bar(position = "fill") +
   labs(
@@ -146,8 +145,8 @@ ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_S
 ```{r}
 
 #| echo: false
-#| fig-width: 4
-#| fig-height: 4
+#| fig-width: 10
+#| fig-height: 10
 ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
   geom_point(alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
@@ -163,6 +162,8 @@ ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
 💡 Conclusion Social media overuse impacts emotional stability and personal relationships.
 :::
 ::::::::
+
+:::
 
 ------------------------------------------------------------------------
 
@@ -275,3 +276,6 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
 -  Raise awareness on the effects of digital addiction.
 -  Use social media for growth and learning.
 -  Schools and universities should offer digital wellness support.
+
+:::
+
