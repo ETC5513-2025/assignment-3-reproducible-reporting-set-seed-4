@@ -143,7 +143,7 @@ Based on the analysis of social media addiction's impact on students, several ke
 
 ## Conclusion & Recommendations
 
-The analysis clearly shows that social media significantly affects students in their daily lives—academically, socially, and mentally. Students with higher addiction scores consistently reported a negative impact on academic performance, regardless of their academic level. Similarly, those with high addiction levels experienced more interpersonal conflicts, indicating that excessive social media use may strain relationships.
+The analysis clearly shows that social media significantly affects students in their daily lives—academically, socially, and mentally. Students with higher addiction scores consistently reported a negative impact on academic performance, regardless of their academic level. Similarly, those with high addiction levels experienced more interpersonal conflicts, indicating that excessive social media use may strain relationships. hhh
 
 A strong negative correlation was observed between daily usage hours and mental health scores—students spending more time on social media reported poorer mental well-being. Platform-specific trends showed that WhatsApp, TikTok, and Snapchat users had the highest usage and addiction scores, suggesting these platforms may contribute more to daily disruptions.
 
