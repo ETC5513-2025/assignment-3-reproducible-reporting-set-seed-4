@@ -20,6 +20,8 @@ This study focuses mainly on "How social media addiction affects students in var
 ### Dataset Description
 
 ```{r}
+#| warning: false
+#| message: false
 library(tidyverse)
 library(dplyr)
 library(readr)

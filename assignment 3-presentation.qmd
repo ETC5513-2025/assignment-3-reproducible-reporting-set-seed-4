@@ -19,8 +19,8 @@ format:
 
 -   Double-edged role:
 
-    - <span style="font-size: 0.9em;">Support connection and self-expression</span> 
-    - <span style="font-size: 0.9em;">Displace essential habits like sleep and study</span>
+    -   [Support connection and self-expression]{style="font-size: 0.9em;"}
+    -   [Displace essential habits like sleep and study]{style="font-size: 0.9em;"}
 
 -   Authorities and researchers have raised concerns about social media in mental health issues
 
@@ -44,8 +44,7 @@ library(readr)
 addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
 
-
-The dataset from Kaggle includes `r nrow(addiction)` student records and `r ncol(addiction)` variables on social media usage and its effects.  Each row represents a student and includes variables like:  
+The dataset from Kaggle includes `r nrow(addiction)` student records and `r ncol(addiction)` variables on social media usage and its effects. Each row represents a student and includes variables like:
 
 ```{r}
 #| label: tbl-variabletable
@@ -57,11 +56,9 @@ missing_data <- data.frame(
 missing_data
 ```
 
-
 ------------------------------------------------------------------------
 
 ### Dataset description
-
 
 ```{r}
 #| label: fig-Distribution
@@ -76,8 +73,8 @@ hist(addiction$Addicted_Score,
      xlab = "Addicted Score",
      ylab = "Frequency")
 ```
-::: {.fragment}
 
+::: fragment
 @fig-Distribution shows that most students report addiction scores between 6 and 8, with few below 4. This suggests a moderate to high level of perceived addiction and sufficient variation for further analysis.
 :::
 
@@ -91,12 +88,14 @@ hist(addiction$Addicted_Score,
 
 -   A boxplot comparing addiction scores among students who reported academic impacts versus those who did not, stratified by academic level.
 
--   A summary table aggregating average usage hours and addiction scores by most used platform. 
+-   A summary table aggregating average usage hours and addiction scores by most used platform.
 
----
+------------------------------------------------------------------------
 
 ## Analysis Part
+
 ### How does social media affect student
+
 ```{r}
 library(ggplot2)
 library(tidyverse)
@@ -107,12 +106,11 @@ library(formattable)
 
 ```
 
-
 ```{r}
 addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
-:::::::: columns
 
+:::::::: columns
 :::: {.column width="33%"}
 ```{r}
 
@@ -140,15 +138,11 @@ ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_S
 ```
 
 ::: fragment
-
 🧱 More addiction = more conflict High addiction scores strongly associate with interpersonal conflicts.
-
 :::
-
 ::::
 
 :::: {.column width="33%"}
-
 ```{r}
 
 #| echo: false
@@ -161,19 +155,13 @@ ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
 ```
 
 ::: fragment
-
 📉 More screen time, worse mental health Daily use over 6 hours relates to low mental well-being.
-
 :::
-
 ::::
 
 ::: {.column .fragment width="33%"}
-
 💡 Conclusion Social media overuse impacts emotional stability and personal relationships.
-
 :::
-
 ::::::::
 
 ------------------------------------------------------------------------
@@ -181,9 +169,7 @@ ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
 ## Platform Patterns & Academic Effects
 
 :::::::: columns
-
 :::: {.column width="40%"}
-
 ```{r}
 platform_summary <- addiction %>%
   group_by(Most_Used_Platform) %>%
@@ -236,15 +222,11 @@ platform_summary %>%
 ```
 
 ::: fragment
-
 📱 WhatsApp & TikTok = high risk Top platforms show highest usage & addiction.
-
 :::
-
 ::::
 
 :::: {.column width="35%"}
-
 ```{r}
 #| echo: false
 #| fig-width: 4
@@ -262,18 +244,34 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
 ```
 
 ::: fragment
-
 🎓 Addiction affects grades Across all academic levels, students reporting academic impact have higher addiction.
-
 :::
-
 ::::
 
 ::: {.column .fragment width="20%"}
-
 📚 Conclusion Usage patterns vary by platform, but academic impact is widespread.
-
 :::
-
 ::::::::
 
+------------------------------------------------------------------------
+
+## Conclusion
+-   Social media significantly affects students' academic, mental, and social well-being.
+-   Higher addiction scores correlate with poor academic performance.
+-   Increased usage leads to more interpersonal conflicts.
+-   Negative relationship found between daily usage hours and mental health.
+-   WhatsApp, TikTok, and Snapchat users show the highest usage and addiction scores.
+-   Heavy engagement reduces focus, mental balance, and relationship quality.
+
+-------------------------------------------------------------------------
+
+## Recommendations
+
+-  Set time limits using digital well-being tools.
+-  Prioritize studies before social media use.
+-  Engage in purposeful, positive online interactions.
+-  Take breaks from distressing platforms.
+-  Invest in offline social connections.
+-  Raise awareness on the effects of digital addiction.
+-  Use social media for growth and learning.
+-  Schools and universities should offer digital wellness support.
