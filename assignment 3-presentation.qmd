@@ -162,9 +162,9 @@ ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
 ::::
 
 :::
-::::::::
 
-:::
+
+
 
 ------------------------------------------------------------------------
 
@@ -252,7 +252,7 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
 
 
 :::
-::::::::
+
 
 ------------------------------------------------------------------------
 
