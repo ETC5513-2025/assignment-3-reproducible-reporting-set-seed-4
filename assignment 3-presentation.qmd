@@ -257,11 +257,11 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
 ------------------------------------------------------------------------
 
 ## Conclusion
+
 -   Social media significantly affects students' academic, mental, and social well-being.
 -   Higher addiction scores correlate with poor academic performance.
--   Increased usage leads to more interpersonal conflicts.
 -   Negative relationship found between daily usage hours and mental health.
--   WhatsApp, TikTok, and Snapchat users show the highest usage and addiction scores.
+-   WhatsApp, TikTok & Snapchat users show the highest usage and addiction scores.
 -   Heavy engagement reduces focus, mental balance, and relationship quality.
 
 -------------------------------------------------------------------------
@@ -277,5 +277,4 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
 -  Use social media for growth and learning.
 -  Schools and universities should offer digital wellness support.
 
-:::
 
