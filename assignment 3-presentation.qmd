@@ -19,15 +19,18 @@ format:
 
 -   Double-edged role:
 
-    -   [Support connection and self-expression]{style="font-size: 0.9em;"}
-    -   [Displace essential habits like sleep and study]{style="font-size: 0.9em;"}
+    -   [Support connection and self-expression]{style="font-size: 0.8em;"}
+    -   [Displace essential habits like sleep and study]{style="font-size: 0.8em;"}
 
--   Authorities and researchers have raised concerns about social media in mental health issues
-
+- Authorities and researchers have raised concerns about social media in mental health issues  
+  
 ::: fragment
 *How does social media addiction affect students’ academic performance, mental health, and relationships?*
 :::
 
+<div style="font-size: 0.7em; color: gray; margin-top: 2em;">
+Guardian, The. (2023). <i>Instagram lawsuit: Meta sued by dozens of US states over impact on youth mental health</i>. <i>The Guardian</i>.
+</div>
 ------------------------------------------------------------------------
 
 ## Dataset description

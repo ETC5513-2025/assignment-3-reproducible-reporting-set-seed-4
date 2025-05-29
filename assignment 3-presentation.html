@@ -126,9 +126,7 @@
     }
   </style>
   <script src="assignment 3-presentation_files/libs/kePrint-0.0.1/kePrint.js"></script>
-
   <link href="assignment 3-presentation_files/libs/lightable-0.0.1/lightable.css" rel="stylesheet">
-
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -168,13 +166,16 @@ Yi yang
 <li><p>Social media platforms are deeply embedded in students’ daily routines</p></li>
 <li><p>Double-edged role:</p>
 <ul>
-<li><span style="font-size: 0.9em;">Support connection and self-expression</span></li>
-<li><span style="font-size: 0.9em;">Displace essential habits like sleep and study</span></li>
+<li><span style="font-size: 0.8em;">Support connection and self-expression</span></li>
+<li><span style="font-size: 0.8em;">Displace essential habits like sleep and study</span></li>
 </ul></li>
 <li><p>Authorities and researchers have raised concerns about social media in mental health issues</p></li>
 </ul>
 <div class="fragment">
 <p><em>How does social media addiction affect students’ academic performance, mental health, and relationships?</em></p>
+</div>
+<div style="font-size: 0.7em; color: gray; margin-top: 2em;">
+<p>Guardian, The. (2023). <i>Instagram lawsuit: Meta sued by dozens of US states over impact on youth mental health</i>. <i>The Guardian</i>.</p>
 </div>
 </section>
 <section id="dataset-description" class="slide level2">
@@ -234,7 +235,7 @@ Figure&nbsp;1: Distribution of Addicted Scores
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="assignment-3-presentation_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+<p><img data-src="assignment-3-presentation_files/figure-revealjs/unnamed-chunk-7-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -247,7 +248,7 @@ Figure&nbsp;1: Distribution of Addicted Scores
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="assignment-3-presentation_files/figure-revealjs/unnamed-chunk-6-1.png" width="960"></p>
+<p><img data-src="assignment-3-presentation_files/figure-revealjs/unnamed-chunk-8-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -336,7 +337,7 @@ Figure&nbsp;1: Distribution of Addicted Scores
 <div class="cell-output-display">
 <div>
 <figure>
-<p><img data-src="assignment-3-presentation_files/figure-revealjs/unnamed-chunk-8-1.png" width="384"></p>
+<p><img data-src="assignment-3-presentation_files/figure-revealjs/unnamed-chunk-10-1.png" width="384"></p>
 </figure>
 </div>
 </div>
@@ -588,80 +589,42 @@ Figure&nbsp;1: Distribution of Addicted Scores
       });
     </script>
     
-
     <script>
-
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-
       // slide changes (different for each slide format).
-
       (function () {
-
         // dispatch for htmlwidgets
-
         function fireSlideEnter() {
-
           const event = window.document.createEvent("Event");
-
           event.initEvent("slideenter", true, true);
-
           window.document.dispatchEvent(event);
-
         }
-
-    
 
         function fireSlideChanged(previousSlide, currentSlide) {
-
           fireSlideEnter();
 
-    
-
           // dispatch for shiny
-
           if (window.jQuery) {
-
             if (previousSlide) {
-
               window.jQuery(previousSlide).trigger("hidden");
-
             }
-
             if (currentSlide) {
-
               window.jQuery(currentSlide).trigger("shown");
-
             }
-
           }
-
         }
-
-    
 
         // hookup for slidy
-
         if (window.w3c_slidy) {
-
           window.w3c_slidy.add_observer(function (slide_num) {
-
             // slide_num starts at position 1
-
             fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-
           });
-
         }
 
-    
-
       })();
-
     </script>
-
-    
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
