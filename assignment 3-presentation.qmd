@@ -264,17 +264,15 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
 -   WhatsApp, TikTok & Snapchat users show the highest usage and addiction scores.
 -   Heavy engagement reduces focus, mental balance, and relationship quality.
 
--------------------------------------------------------------------------
+------------------------------------------------------------------------
 
 ## Recommendations
 
--  Set time limits using digital well-being tools.
--  Prioritize studies before social media use.
--  Engage in purposeful, positive online interactions.
--  Take breaks from distressing platforms.
--  Invest in offline social connections.
--  Raise awareness on the effects of digital addiction.
--  Use social media for growth and learning.
--  Schools and universities should offer digital wellness support.
-
-
+-   **Set time limits** using digital well-being tools.
+-   **Prioritize studies** before social media use.
+-   Engage in purposeful, positive online interactions.
+-   **Take breaks** from distressing platforms.
+-   Invest in **offline social connections.**
+-   **Raise awareness** on the effects of digital addiction.
+-   Use social media for growth and learning.
+-   Schools and universities should **offer digital wellness support.**
