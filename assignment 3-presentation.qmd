@@ -114,11 +114,9 @@ addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
 
 :::::::: columns
-:::: {.column width="33%"}
+:::: {.column width="50%"}
 ```{r}
 #| echo: false
-#| fig-width: 12
-#| fig-height: 12
 ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_Social_Media))) +
   geom_bar(position = "fill") +
   labs(
@@ -144,12 +142,10 @@ ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_S
 :::
 ::::
 
-:::: {.column width="45%"}
+:::: {.column width="50%"}
 ```{r}
 
 #| echo: false
-#| fig-width: 12
-#| fig-height: 12
 ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
   geom_point(alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
