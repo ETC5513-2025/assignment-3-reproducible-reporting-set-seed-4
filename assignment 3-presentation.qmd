@@ -8,29 +8,29 @@ author:
 date: 2025-05-29
 format:
   revealjs:
-    title-slide: false
     theme: simple
     transition: fade
 ---
 
-## Introduction
+## Introduction {.small}
 
 -   Social media platforms are deeply embedded in students’ daily routines
 
 -   Double-edged role:
 
-    -   [Support connection and self-expression]{style="font-size: 0.8em;"}
-    -   [Displace essential habits like sleep and study]{style="font-size: 0.8em;"}
+    - <span style="font-size: 0.8em;">Support connection and self-expression</span> 
+    - <span style="font-size: 0.8em;">Displace essential habits like sleep and study</span>
 
-- Authorities and researchers have raised concerns about social media in mental health issues  
-  
+- Authorities and researchers have raised concerns about social media in mental health issues¹
+
 ::: fragment
 *How does social media addiction affect students’ academic performance, mental health, and relationships?*
 :::
 
-<div style="font-size: 0.7em; color: gray; margin-top: 2em;">
-Guardian, The. (2023). <i>Instagram lawsuit: Meta sued by dozens of US states over impact on youth mental health</i>. <i>The Guardian</i>.
+<div style="font-size: 0.4em; color: gray; margin-top: 0.1em;">
+1. The Guardian. (2023). <i>Instagram lawsuit: Meta sued by dozens of US states over impact on youth mental health</i>. <i>The Guardian</i>.
 </div>
+
 ------------------------------------------------------------------------
 
 ## Dataset description
