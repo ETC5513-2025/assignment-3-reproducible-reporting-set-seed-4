@@ -114,11 +114,11 @@ addiction <- read.csv("data/Students Social Media Addiction.csv")
 ```
 
 :::::::: columns
-:::: {.column width="33%"}
+:::: {.column width="40%"}
 ```{r}
 #| echo: false
-#| fig-width: 10
-#| fig-height: 10
+#| fig-width: 12
+#| fig-height: 12
 ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_Social_Media))) +
   geom_bar(position = "fill") +
   labs(
@@ -139,17 +139,17 @@ ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_S
 
 ```
 
-::: fragment
+::: {.fragment style="font-size: 80%;"}
 🧱 More addiction = more conflict High addiction scores strongly associate with interpersonal conflicts.
 :::
 ::::
 
-:::: {.column width="33%"}
+:::: {.column width="45%"}
 ```{r}
 
 #| echo: false
-#| fig-width: 10
-#| fig-height: 10
+#| fig-width: 12
+#| fig-height: 12
 ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
   geom_point(alpha = 0.6) +
   geom_smooth(method = "lm", se = FALSE) +
@@ -228,11 +228,11 @@ platform_summary %>%
 :::
 ::::
 
-:::: {.column width="35%"}
+:::: {.column width="45%"}
 ```{r}
 #| echo: false
-#| fig-width: 4
-#| fig-height: 4
+#| fig-width: 8
+#| fig-height: 8
 ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill = Affects_Academic_Performance)) +
   geom_boxplot() +
   facet_wrap(~ Academic_Level) +
@@ -245,7 +245,7 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
 
 ```
 
-::: fragment
+::: {.fragment style="font-size: 80%;"}
 🎓 Addiction affects grades Across all academic levels, students reporting academic impact have higher addiction.
 :::
 ::::
