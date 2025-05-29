@@ -161,8 +161,6 @@ ggplot(addiction, aes(x = Avg_Daily_Usage_Hours, y = Mental_Health_Score)) +
 :::
 ::::
 
-::: {.column .fragment width="33%"}
-💡 Conclusion Social media overuse impacts emotional stability and personal relationships.
 :::
 ::::::::
 
@@ -252,8 +250,7 @@ ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill
 :::
 ::::
 
-::: {.column .fragment width="20%"}
-📚 Conclusion Usage patterns vary by platform, but academic impact is widespread.
+
 :::
 ::::::::
 
