@@ -4,83 +4,13 @@ format: html
 editor: visual
 bibliography: references.bib
 ---
+
 ## Introduction
 
-Social media platforms—such as Instagram, TikTok, and YouTube—have become an integral part of students' lives, shaping their routines, relationships and self-perception.
+Social media platforms—such as Instagram, TikTok, and YouTube—have become an integral part of students' lives, which influence their relationships, habits, and self-perception.
 
 The use of social media, whether through direct communication or sharing and interacting with content, plays an inherently social role in students' lives. As such, social media usage may have important implications for increasing connection with individuals and groups, offering young people a forum to find community and express themselves [@winstone2021social].
 
 However, rising concerns from the U.S. Surgeon General and multiple research studies have drawn attention to the negative impact of social media on the well-being of young people, and that excessive use of social media—often measured by screen time—seems to displace essential activities such as sleep and exercise [@nyt2023surgeon]. The attorneys general of dozens of US states sued Instagram and its parent company Meta over their impact on young users, accusing them of contributing to a youth mental health crisis through the addictive nature of their social media platforms [@guardian2023meta]. These discussions reveal the dual-edged role of social media–it can foster connection, yet also introduce risks that may affect students’ health, behavior, and academic life.
 
-This study focuses on students–mostly undergraduates and graduates–to explore the impact of social media addiction on academic performance and interpersonal relationships, as well as how time spent on social media relates to mental health. Our findings could not only inform further research into how these addiction-driven trends are interconnected, but also potentially support governments and educators in developing strategies to promote student well-being.
-
-## Methodology
-
-This project investigates the impact of social media addiction on students using a publicly available dataset. Key variables include daily usage hours, addiction scores, academic performance impact, mental health ratings, interpersonal conflicts, and most used platforms. Data cleaning involved checking for missing values.
-
-Descriptive and exploratory analyses were conducted to examine associations between addiction levels and outcomes. Boxplots, bar charts, and scatter plots were created to visualize variable relationships. A summary table was also generated to compare average usage hours and addiction scores by platform.
-
-```{r}
-library(tidyverse)
-```
-
-```{r}
-addiction <- read.csv("data/Students Social Media Addiction.csv")
-```
-
-```{r}
-head(addiction,2)
-```
-
-```{r}
-missing_data <- data.frame(
-  Missing_Count = colSums(is.na(addiction))
-)
-missing_data
-```
-
-```{r}
-ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill = Affects_Academic_Performance)) +
-  geom_boxplot() +
-  facet_wrap(~ Academic_Level) +
-  labs(title = "Addicted Score vs Academic Impact (by Academic Level)",
-       x = "Does Social Media Affect Academic Performance?",
-       y = "Addicted Score") +
-  theme_minimal()
-```
-
-```{r}
-ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_Social_Media))) +
-  geom_bar(position = "fill") +
-  labs(title = "Interpersonal Conflicts by Addiction Score",
-       x = "Addicted Score", y = "Proportion",
-       fill = "Conflicts Occurred?") +
-  theme_minimal() +
-  theme(axis.text.x = element_text(angle = 45, hjust = 1))
-
-```
-
-```{r}
-ggplot(addiction, aes(x = Avg_Daily_Usage_Hours,
-               y = Mental_Health_Score)) +
-  geom_point(alpha = 0.6) +
-  geom_smooth(method = "lm", se = FALSE) +
-  theme_minimal()
-```
-
-```{r}
-library(dplyr)
-
-platform_summary <- addiction %>%
-  group_by(Most_Used_Platform) %>%
-  summarise(
-    Average_Usage_Hours    = mean(Avg_Daily_Usage_Hours, na.rm = TRUE),
-    Average_Addicted_Score = mean(Addicted_Score,        na.rm = TRUE)
-  ) %>%
-  arrange(desc(Average_Usage_Hours))
-platform_summary
-```
-
-Analysis section:
-
-Based on the analysis of social media addiction's impact on students, several key findings emerge from the visualizations: Academic Performance Impact: The boxplot reveals a clear pattern where students reporting academic performance effects consistently show higher addiction scores (6-8 range) compared to those without reported effects (4-5 range). This relationship holds across all academic levels - graduate, high school, and undergraduate students. Interpersonal Conflicts: The stacked bar chart demonstrates a strong positive correlation between addiction scores and interpersonal conflicts. Students with lower addiction scores (1-3) experience minimal conflicts, while those with higher scores (6-9) show dramatically increased conflict frequency, with some experiencing up to 5 conflicts. Mental Health Correlation: The scatter plot illustrates a negative relationship between daily usage hours and mental health scores. As average daily usage increases from 2 to 8 hours, mental health scores decline from approximately 8.5 to 3.5, indicating deteriorating psychological well-being. Platform-Specific Patterns: WhatsApp users show both the highest average usage hours (6.48) and addiction scores (7.46), followed closely by TikTok users. Traditional platforms like Facebook and VKontakte demonstrate lower usage and addiction metrics. These findings support the research hypothesis that excessive social media engagement negatively impacts academic performance, interpersonal relationships, and mental health across student populations.
+This study focuses mainly on "How social media addiction affects students in various parts of their lives". In this analysis, students–mostly undergraduates and graduates are considered to explore the impact of social media addiction on academic performance and interpersonal relationships, as well as how time spent on social media relates to mental health. Our findings could not only inform further research into how these addiction-driven trends are interconnected, but also potentially support governments and educators in developing strategies to promote student well-being.
