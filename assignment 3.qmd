@@ -148,7 +148,8 @@ ggplot(addiction, aes(x = Affects_Academic_Performance,
   facet_wrap(~ Academic_Level) +
   labs(title = "Addicted Score vs Academic Impact (by Academic Level)",
        x = "Does Social Media Affect Academic Performance?",
-       y = "Addicted Score") +
+       y = "Addicted Score",
+       fill = "Reported Academic Impact") +
   theme_minimal()
 ```
 
