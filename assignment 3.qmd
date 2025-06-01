@@ -3,6 +3,8 @@ title: "assignment 3"
 format: html
 editor: visual
 bibliography: references.bib
+nocite: |
+  @tidyverse
 ---
 
 ## Introduction
