@@ -1,6 +1,8 @@
 ---
 title: "The Impact of Social Media Addiction on Students"
-format: html
+format: 
+  html: default
+  pdf: default
 editor: visual
 bibliography: references.bib
 nocite: |
