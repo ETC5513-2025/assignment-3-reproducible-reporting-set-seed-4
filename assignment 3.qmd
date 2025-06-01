@@ -11,6 +11,7 @@ bibliography: references.bib
 nocite: |
   @*
 ---
+\newpage
 
 ## Introduction
 
@@ -178,4 +179,4 @@ Here are some recommendations:
 -   Institutions like schools and universities should provide mental health resources and counseling services that address issues related to digital overuse and stress.
 
 This study focuses mainly on "How social media addiction affects students in various parts of their lives". In this analysis, students–mostly undergraduates and graduates are considered to explore the impact of social media addiction on academic performance and interpersonal relationships, as well as how time spent on social media relates to mental health. Our findings could not only inform further research into how these addiction-driven trends are interconnected, but also potentially support governments and educators in developing strategies to promote student well-being.
-
+\newpage
