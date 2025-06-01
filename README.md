@@ -2,9 +2,9 @@
 
 Group Members:
 
-*Nana Cheng
-*Kaiyi Ye
-*Yi Yang
-*Richa Anghan
+- Nana Cheng
+- Kaiyi Ye
+- Yi Yang
+- Richa Anghan
 
-Topic: How social media addiction affects students in various parts of their lives
+Topic: The Impact of Social Media Addiction on Students
