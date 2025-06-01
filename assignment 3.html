@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 /* CSS for citations */
 div.csl-bib-body { }
 div.csl-entry {
@@ -87,7 +121,6 @@ div.csl-indent {
 <p>Social media platforms—such as Instagram, TikTok, and YouTube—have become an integral part of students’ lives, which influence their relationships, habits, and self-perception.</p>
 <p>The use of social media, whether through direct communication or sharing and interacting with content, plays an inherently social role in students’ lives. As such, social media usage may have important implications for increasing connection with individuals and groups, offering young people a forum to find community and express themselves <span class="citation" data-cites="winstone_social_2021">(<a href="#ref-winstone_social_2021" role="doc-biblioref">Winstone et al. 2021</a>)</span>.</p>
 <p>However, rising concerns from the U.S. Surgeon General and multiple research studies have drawn attention to the negative impact of social media on the well-being of young people, and that excessive use of social media—often measured by screen time—seems to displace essential activities such as sleep and exercise <span class="citation" data-cites="richtel_surgeon_2023">(<a href="#ref-richtel_surgeon_2023" role="doc-biblioref">Richtel, Pearson, and Levenson 2023</a>)</span>. The attorneys general of dozens of US states sued Instagram and its parent company Meta over their impact on young users, accusing them of contributing to a youth mental health crisis through the addictive nature of their social media platforms <span class="citation" data-cites="paul_meta_2023">(<a href="#ref-paul_meta_2023" role="doc-biblioref">Paul 2023</a>)</span>. These discussions reveal the dual-edged role of social media–it can foster connection, yet also introduce risks that may affect students’ health, behavior, and academic life.</p>
-<<<<<<< HEAD
 <p>This study focuses mainly on the impact of social media addiction on students. In this analysis, students–mostly undergraduates and graduates are considered to explore the impact of social media addiction on academic performance and interpersonal relationships, as well as how time spent on social media relates to mental health. Our findings could not only inform further research into how these addiction-driven trends are interconnected, but also potentially support governments and educators in developing strategies to promote student well-being.</p>
 </section>
 <section id="methodology" class="level2">
@@ -305,8 +338,6 @@ Figure&nbsp;4: Addicted Score vs Academic Impact (by Academic Level)
 <li>Use social media as a tool for enrichment rather than one that diminishes personal growth and stability.</li>
 <li>Institutions like schools and universities should provide mental health resources and counseling services that address issues related to digital overuse and stress.</li>
 </ul>
-=======
->>>>>>> intro
 <p>This study focuses mainly on “How social media addiction affects students in various parts of their lives”. In this analysis, students–mostly undergraduates and graduates are considered to explore the impact of social media addiction on academic performance and interpersonal relationships, as well as how time spent on social media relates to mental health. Our findings could not only inform further research into how these addiction-driven trends are interconnected, but also potentially support governments and educators in developing strategies to promote student well-being.</p>
 
 </section>
@@ -318,13 +349,11 @@ Paul, Kari. 2023. <span>“Meta Sued by 33 States over Claims Youth Mental Healt
 <div id="ref-richtel_surgeon_2023" class="csl-entry" role="listitem">
 Richtel, Matt, Catherine Pearson, and Michael Levenson. 2023. <span>“Surgeon General Warns That Social Media May Harm Children and Adolescents.”</span> <em>The New York Times</em>, May. <a href="https://www.nytimes.com/2023/05/23/health/surgeon-general-social-media-mental-health.html">https://www.nytimes.com/2023/05/23/health/surgeon-general-social-media-mental-health.html</a>.
 </div>
-<<<<<<< HEAD
 <div id="ref-shamim2023social" class="csl-entry" role="listitem">
 Shamim, Adil. 2023. <span>“Social Media Addiction Vs Relationships.”</span> <a href="https://www.kaggle.com/datasets/adilshamim8/social-media-addiction-vs-relationships" class="uri">https://www.kaggle.com/datasets/adilshamim8/social-media-addiction-vs-relationships</a>.
-=======
+</div>
 <div id="ref-tidyverse" class="csl-entry" role="listitem">
 Wickham, Hadley, Mara Averick, Jennifer Bryan, Winston Chang, Lucy D’Agostino McGowan, Romain François, Garrett Grolemund, et al. 2019. <span>“Welcome to the <span class="nocase">tidyverse</span>.”</span> <em>Journal of Open Source Software</em> 4 (43): 1686. <a href="https://doi.org/10.21105/joss.01686">https://doi.org/10.21105/joss.01686</a>.
->>>>>>> intro
 </div>
 <div id="ref-winstone_social_2021" class="csl-entry" role="listitem">
 Winstone, Lizzy, Becky Mars, Claire M. A. Haworth, and Judi Kidger. 2021. <span>“Social Media Use and Social Connectedness Among Adolescents in the United Kingdom: A Qualitative Exploration of Displacement and Stimulation.”</span> <em><span>BMC</span> Public Health</em> 21 (1): 1736. <a href="https://doi.org/10.1186/s12889-021-11802-9">https://doi.org/10.1186/s12889-021-11802-9</a>.
