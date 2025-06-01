@@ -13,6 +13,10 @@ nocite: |
 ---
 \newpage
 
+## Executive Summary
+
+This study explores how social media addiction affects students' academic performance, interpersonal relationships, and mental health. The results show that higher addiction scores are associated with poorer academic outcomes, increased interpersonal conflict, and reduced mental well-being. This pattern varies across platforms, with WhatsApp, TikTok, and Snapchat showing the highest average addiction scores. These findings may guide future research on social media addiction and help inform policies and educational strategies aimed at improving student well-being.
+
 ## Introduction
 
 Social media platforms—such as Instagram, TikTok, and YouTube—have become an integral part of students' lives, which influence their relationships, habits, and self-perception.
