@@ -25,6 +25,7 @@ This study focuses mainly on the impact of social media addiction on students. I
 #| warning: false
 #| message: false
 library(tidyverse)
+library(kableExtra)
 ```
 
 ```{r}
@@ -44,7 +45,7 @@ head(addiction,2)
 missing_data <- data.frame(
   Missing_Count = colSums(is.na(addiction))
 )
-missing_data
+kable(missing_data)
 ```
 
 As shown in @tbl-variabletable , all key variables such as addiction score, academic performance impact, sleep hours, and mental health score had no missing values, indicating a complete dataset suitable for analysis without imputation.
@@ -83,10 +84,12 @@ Visual analyses were used to explore associations between social media addiction
 #| label: fig-barchart
 #| fig-cap: "Interpersonal Conflicts by Addiction Score"
 #| eval: true
-ggplot(addiction, aes(x = factor(Addicted_Score), fill = factor(Conflicts_Over_Social_Media))) +
+ggplot(addiction, aes(x = factor(Addicted_Score), 
+                      fill = factor(Conflicts_Over_Social_Media))) +
   geom_bar(position = "fill") +
   labs(title = "Interpersonal Conflicts by Addiction Score",
-       x = "Addicted Score", y = "Proportion",
+       x = "Addicted Score", 
+       y = "Proportion",
        fill = "Number of Conflicts") +
   theme_minimal() +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
@@ -124,7 +127,9 @@ platform_summary <- addiction %>%
     Average_Addicted_Score = mean(Addicted_Score,        na.rm = TRUE)
   ) %>%
   arrange(desc(Average_Usage_Hours))
-platform_summary
+
+kable(platform_summary)
+
 ```
 
 Platform-Specific Patterns @tbl-table: WhatsApp users show both the highest average usage hours (6.48) and addiction scores (7.46), followed closely by TikTok users. Traditional platforms like Facebook and VKontakte demonstrate lower usage and addiction metrics. These findings support the research hypothesis that excessive social media engagement negatively impacts academic performance, interpersonal relationships, and mental health across student populations.
@@ -134,7 +139,9 @@ Platform-Specific Patterns @tbl-table: WhatsApp users show both the highest aver
 #| fig-cap: "Addicted Score vs Academic Impact (by Academic Level)"
 #| eval: true
 
-ggplot(addiction, aes(x = Affects_Academic_Performance, y = Addicted_Score, fill = Affects_Academic_Performance)) +
+ggplot(addiction, aes(x = Affects_Academic_Performance, 
+                      y = Addicted_Score, 
+                      fill = Affects_Academic_Performance)) +
   geom_boxplot() +
   facet_wrap(~ Academic_Level) +
   labs(title = "Addicted Score vs Academic Impact (by Academic Level)",

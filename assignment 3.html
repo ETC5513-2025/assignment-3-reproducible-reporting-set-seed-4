@@ -128,7 +128,8 @@ div.csl-indent {
 <section id="dataset-description" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-description">Dataset Description</h3>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(kableExtra)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>addiction <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"data/Students Social Media Addiction.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -151,44 +152,94 @@ div.csl-indent {
 2              3</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>missing_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Missing_Count =</span> <span class="fu">colSums</span>(<span class="fu">is.na</span>(addiction))</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(missing_data)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="tbl-variabletable" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-variabletable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;1: Variable Names of the addiction Data
 </figcaption>
 <div aria-describedby="tbl-variabletable-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>missing_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Missing_Count =</span> <span class="fu">colSums</span>(<span class="fu">is.na</span>(addiction))</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>missing_data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>                             Missing_Count
-Student_ID                               0
-Age                                      0
-Gender                                   0
-Academic_Level                           0
-Country                                  0
-Avg_Daily_Usage_Hours                    0
-Most_Used_Platform                       0
-Affects_Academic_Performance             0
-Sleep_Hours_Per_Night                    0
-Mental_Health_Score                      0
-Relationship_Status                      0
-Conflicts_Over_Social_Media              0
-Addicted_Score                           0</code></pre>
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">Missing_Count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Student_ID</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Age</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Gender</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Academic_Level</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Country</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Avg_Daily_Usage_Hours</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Most_Used_Platform</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Affects_Academic_Performance</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sleep_Hours_Per_Night</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mental_Health_Score</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Relationship_Status</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Conflicts_Over_Social_Media</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Addicted_Score</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </figure>
 </div>
+</div>
 <p>As shown in <a href="#tbl-variabletable" class="quarto-xref">Table&nbsp;1</a> , all key variables such as addiction score, academic performance impact, sleep hours, and mental health score had no missing values, indicating a complete dataset suitable for analysis without imputation.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(addiction<span class="sc">$</span>Addicted_Score,</span>
-<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks =</span> <span class="dv">6</span>,</span>
-<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"skyblue"</span>,</span>
-<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"black"</span>,</span>
-<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Distribution of Addicted Scores"</span>,</span>
-<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Addicted Score"</span>,</span>
-<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">hist</span>(addiction<span class="sc">$</span>Addicted_Score,</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>     <span class="at">breaks =</span> <span class="dv">6</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>     <span class="at">col =</span> <span class="st">"skyblue"</span>,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>     <span class="at">border =</span> <span class="st">"black"</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>     <span class="at">main =</span> <span class="st">"Distribution of Addicted Scores"</span>,</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>     <span class="at">xlab =</span> <span class="st">"Addicted Score"</span>,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>     <span class="at">ylab =</span> <span class="st">"Frequency"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-Distribution" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -218,13 +269,15 @@ Figure&nbsp;1: Distribution of Addicted Scores
 <section id="result" class="level2">
 <h2 class="anchored" data-anchor-id="result">Result</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(addiction, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(Addicted_Score), <span class="at">fill =</span> <span class="fu">factor</span>(Conflicts_Over_Social_Media))) <span class="sc">+</span></span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Interpersonal Conflicts by Addiction Score"</span>,</span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Addicted Score"</span>, <span class="at">y =</span> <span class="st">"Proportion"</span>,</span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Number of Conflicts"</span>) <span class="sc">+</span></span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(addiction, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">factor</span>(Addicted_Score), </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">fill =</span> <span class="fu">factor</span>(Conflicts_Over_Social_Media))) <span class="sc">+</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">position =</span> <span class="st">"fill"</span>) <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Interpersonal Conflicts by Addiction Score"</span>,</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Addicted Score"</span>, </span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Proportion"</span>,</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">fill =</span> <span class="st">"Number of Conflicts"</span>) <span class="sc">+</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-barchart" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -240,16 +293,16 @@ Figure&nbsp;2: Interpersonal Conflicts by Addiction Score
 </div>
 <p>Interpersonal Conflicts <a href="#fig-barchart" class="quarto-xref">Figure&nbsp;2</a>: The stacked bar chart demonstrates a strong positive correlation between addiction scores and interpersonal conflicts. Students with lower addiction scores (1-3) experience minimal conflicts, while those with higher scores (6-9) show dramatically increased conflict frequency, with some experiencing up to 5 conflicts.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(addiction, <span class="fu">aes</span>(<span class="at">x =</span> Avg_Daily_Usage_Hours,</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">y =</span> Mental_Health_Score)) <span class="sc">+</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Social Media Usage vs Mental Health Score"</span>,</span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Average Daily Social Media Use (hours)"</span>,</span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Mental Health Score"</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(addiction, <span class="fu">aes</span>(<span class="at">x =</span> Avg_Daily_Usage_Hours,</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>               <span class="at">y =</span> Mental_Health_Score)) <span class="sc">+</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.6</span>) <span class="sc">+</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Social Media Usage vs Mental Health Score"</span>,</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Average Daily Social Media Use (hours)"</span>,</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Mental Health Score"</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-scatterplot" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
@@ -264,49 +317,110 @@ Figure&nbsp;3: Interpersonal Conflicts by Addiction Score
 </div>
 </div>
 <p>Mental Health Correlation <a href="#fig-scatterplot" class="quarto-xref">Figure&nbsp;3</a>: The scatter plot illustrates a negative relationship between daily usage hours and mental health scores. As average daily usage increases from 2 to 8 hours, mental health scores decline from approximately 8.5 to 3.5, indicating deteriorating psychological well-being.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>platform_summary <span class="ot">&lt;-</span> addiction <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Most_Used_Platform) <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Average_Usage_Hours    =</span> <span class="fu">mean</span>(Avg_Daily_Usage_Hours, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Average_Addicted_Score =</span> <span class="fu">mean</span>(Addicted_Score,        <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Average_Usage_Hours))</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(platform_summary)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div id="tbl-table" class="cell quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Table&nbsp;2: Average Usage Hours and Addiction Score by Platform
 </figcaption>
 <div aria-describedby="tbl-table-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>platform_summary <span class="ot">&lt;-</span> addiction <span class="sc">%&gt;%</span></span>
-<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(Most_Used_Platform) <span class="sc">%&gt;%</span></span>
-<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(</span>
-<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">Average_Usage_Hours    =</span> <span class="fu">mean</span>(Avg_Daily_Usage_Hours, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
-<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">Average_Addicted_Score =</span> <span class="fu">mean</span>(Addicted_Score,        <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
-<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Average_Usage_Hours))</span>
-<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>platform_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 12 × 3
-   Most_Used_Platform Average_Usage_Hours Average_Addicted_Score
-   &lt;chr&gt;                            &lt;dbl&gt;                  &lt;dbl&gt;
- 1 WhatsApp                          6.48                   7.46
- 2 TikTok                            5.35                   7.43
- 3 Snapchat                          5.09                   7.46
- 4 WeChat                            4.96                   6.07
- 5 Instagram                         4.87                   6.55
- 6 Twitter                           4.87                   5.5 
- 7 KakaoTalk                         4.72                   6   
- 8 Facebook                          4.51                   5.67
- 9 VKontakte                         4.25                   5   
-10 YouTube                           4.08                   6.1 
-11 LINE                              3.25                   3   
-12 LinkedIn                          2.52                   3.81</code></pre>
+<div class="cell-output-display">
+<table class="do-not-create-environment cell caption-top table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Most_Used_Platform</th>
+<th style="text-align: right;">Average_Usage_Hours</th>
+<th style="text-align: right;">Average_Addicted_Score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">WhatsApp</td>
+<td style="text-align: right;">6.475926</td>
+<td style="text-align: right;">7.462963</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">TikTok</td>
+<td style="text-align: right;">5.346104</td>
+<td style="text-align: right;">7.428571</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Snapchat</td>
+<td style="text-align: right;">5.092308</td>
+<td style="text-align: right;">7.461538</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">WeChat</td>
+<td style="text-align: right;">4.960000</td>
+<td style="text-align: right;">6.066667</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Instagram</td>
+<td style="text-align: right;">4.872289</td>
+<td style="text-align: right;">6.554217</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Twitter</td>
+<td style="text-align: right;">4.870000</td>
+<td style="text-align: right;">5.500000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">KakaoTalk</td>
+<td style="text-align: right;">4.725000</td>
+<td style="text-align: right;">6.000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Facebook</td>
+<td style="text-align: right;">4.507317</td>
+<td style="text-align: right;">5.666667</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">VKontakte</td>
+<td style="text-align: right;">4.250000</td>
+<td style="text-align: right;">5.000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">YouTube</td>
+<td style="text-align: right;">4.080000</td>
+<td style="text-align: right;">6.100000</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">LINE</td>
+<td style="text-align: right;">3.250000</td>
+<td style="text-align: right;">3.000000</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">LinkedIn</td>
+<td style="text-align: right;">2.519048</td>
+<td style="text-align: right;">3.809524</td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 </figure>
 </div>
+</div>
 <p>Platform-Specific Patterns <a href="#tbl-table" class="quarto-xref">Table&nbsp;2</a>: WhatsApp users show both the highest average usage hours (6.48) and addiction scores (7.46), followed closely by TikTok users. Traditional platforms like Facebook and VKontakte demonstrate lower usage and addiction metrics. These findings support the research hypothesis that excessive social media engagement negatively impacts academic performance, interpersonal relationships, and mental health across student populations.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(addiction, <span class="fu">aes</span>(<span class="at">x =</span> Affects_Academic_Performance, <span class="at">y =</span> Addicted_Score, <span class="at">fill =</span> Affects_Academic_Performance)) <span class="sc">+</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Academic_Level) <span class="sc">+</span></span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Addicted Score vs Academic Impact (by Academic Level)"</span>,</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Does Social Media Affect Academic Performance?"</span>,</span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Addicted Score"</span>) <span class="sc">+</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(addiction, <span class="fu">aes</span>(<span class="at">x =</span> Affects_Academic_Performance, </span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>                      <span class="at">y =</span> Addicted_Score, </span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>                      <span class="at">fill =</span> Affects_Academic_Performance)) <span class="sc">+</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span> Academic_Level) <span class="sc">+</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Addicted Score vs Academic Impact (by Academic Level)"</span>,</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">x =</span> <span class="st">"Does Social Media Affect Academic Performance?"</span>,</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>       <span class="at">y =</span> <span class="st">"Addicted Score"</span>) <span class="sc">+</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div id="fig-variablechar" class="quarto-float quarto-figure quarto-figure-center anchored">
 <figure class="quarto-float quarto-float-fig figure">
