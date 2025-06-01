@@ -2,7 +2,10 @@
 title: "The Impact of Social Media Addiction on Students"
 format: 
   html: default
-  pdf: default
+  pdf: 
+    toc: true
+    toc-depth: 2
+    number-sections: true
 editor: visual
 bibliography: references.bib
 nocite: |
