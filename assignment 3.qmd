@@ -23,9 +23,6 @@ This study focuses mainly on the impact of social media addiction on students. I
 #| warning: false
 #| message: false
 library(tidyverse)
-library(dplyr)
-library(readr)
-
 ```
 
 ```{r}
